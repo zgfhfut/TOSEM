@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C235EB17-A4C5-40F3-B232-43E21E59181D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SMPSOmain</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Algorithm.h" />
+    <ClInclude Include="Archive.h" />
+    <ClInclude Include="ArrayReal.h" />
+    <ClInclude Include="ArrayRealSolutionType.h" />
+    <ClInclude Include="Binary.h" />
+    <ClInclude Include="BinaryReal.h" />
+    <ClInclude Include="BinaryRealSolutionType.h" />
+    <ClInclude Include="Comparator.h" />
+    <ClInclude Include="CrowdingArchive.h" />
+    <ClInclude Include="CrowdingDistanceComparator.h" />
+    <ClInclude Include="Distance.h" />
+    <ClInclude Include="DominanceComparator.h" />
+    <ClInclude Include="EqualSolutions.h" />
+    <ClInclude Include="gobel.h" />
+    <ClInclude Include="Mutation.h" />
+    <ClInclude Include="ObjectiveComparator.h" />
+    <ClInclude Include="Operator.h" />
+    <ClInclude Include="OverallConstraintViolationComparator.h" />
+    <ClInclude Include="PolynomialMutation.h" />
+    <ClInclude Include="Problem.h" />
+    <ClInclude Include="ProblemFactory.h" />
+    <ClInclude Include="PseudoRandom.h" />
+    <ClInclude Include="RandomGenerator.h" />
+    <ClInclude Include="Real.h" />
+    <ClInclude Include="RealSolutionType.h" />
+    <ClInclude Include="SMPSO.h" />
+    <ClInclude Include="Solution.h" />
+    <ClInclude Include="SolutionSet.h" />
+    <ClInclude Include="SolutionType.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Tanaka.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Variable.h" />
+    <ClInclude Include="XReal.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Algorithm.cpp" />
+    <ClCompile Include="Archive.cpp" />
+    <ClCompile Include="ArrayReal.cpp" />
+    <ClCompile Include="ArrayRealSolutionType.cpp" />
+    <ClCompile Include="Binary.cpp" />
+    <ClCompile Include="BinaryReal.cpp" />
+    <ClCompile Include="BinaryRealSolutionType.cpp" />
+    <ClCompile Include="Comparator.cpp" />
+    <ClCompile Include="CrowdingArchive.cpp" />
+    <ClCompile Include="CrowdingDistanceComparator.cpp" />
+    <ClCompile Include="Distance.cpp" />
+    <ClCompile Include="DominanceComparator.cpp" />
+    <ClCompile Include="EqualSolutions.cpp" />
+    <ClCompile Include="Mutation.cpp" />
+    <ClCompile Include="ObjectiveComparator.cpp" />
+    <ClCompile Include="Operator.cpp" />
+    <ClCompile Include="OverallConstraintViolationComparator.cpp" />
+    <ClCompile Include="PolynomialMutation.cpp" />
+    <ClCompile Include="Problem.cpp" />
+    <ClCompile Include="ProblemFactory.cpp" />
+    <ClCompile Include="PseudoRandom.cpp" />
+    <ClCompile Include="RandomGenerator.cpp" />
+    <ClCompile Include="Real.cpp" />
+    <ClCompile Include="RealSolutionType.cpp" />
+    <ClCompile Include="SMPSO-main.cpp" />
+    <ClCompile Include="SMPSO.cpp" />
+    <ClCompile Include="Solution.cpp" />
+    <ClCompile Include="SolutionSet.cpp" />
+    <ClCompile Include="SolutionType.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Tanaka.cpp" />
+    <ClCompile Include="Variable.cpp" />
+    <ClCompile Include="XReal.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
